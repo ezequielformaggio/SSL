@@ -1,0 +1,50 @@
+Tecnologias que utilizan el lenguaje C
+Formaggio Ezequiel 
+Legajo: 162.866.5
+
+- Indicar para cada una de estas tecnologias si se desarolla en C o no.
+
+1 Fl Studio
+
+Programado en Object Pascal y Delphi.
+No posee respositorio publico.
+
+2 Youtube
+
+No esta programado en C
+Repositorio: https://github.com/youtube
+
+3 Google
+
+Programado parcialmente en C
+Repositorio: https://github.com/google
+
+4 WhatsApp
+
+No esta programado en C
+Repositorio: https://github.com/whatsApp
+
+5 Spotify
+
+Si, desarrollado parcialmente en C
+Repositorio: https://github.com/spotify
+
+6 Netflix
+
+No esta programado en C
+Repositorio: https://github.com/netflix
+
+7 Line 6
+
+Programado en C
+https://github.com/line6
+
+8 Adove Photoshop Lightroom
+
+No esta programado en C (C++ y Lua)
+No posee respositorio publico.
+
+9 C++
+
+Escrito en c
+
