@@ -26,9 +26,12 @@ int main(void){
 int i=42;
 pront("La respuesta es %d\n");
 
-Paso 4) Investigar la semantica de la primera linea
+Paso 4) Investigar la semantica de la primera linea:
 
-##############################################################################
+int printf(const char *s, ...);
+
+La semantica es la siguiente:  int printf(const char* formato,...)
+Siendo s el formato que la función printf va a imprimir (string)
 
 Paso 5) Preprocesar hello3.c, no compilar, y generar hello3.i. Buscar diferencias
 entre hello3.c y hello3.i.
@@ -122,6 +125,7 @@ int main(void){
 }
 
 Paso 15) Exlpicar porque funciona.
+
 
 
 
