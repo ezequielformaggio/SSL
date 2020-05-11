@@ -33,6 +33,7 @@ Desaparecen los comentarios.
 
 La semántica es la siguiente:  int printf(const char* formato,...)
 Siendo s el formato que la función printf va a imprimir (string)
+significa que ahora existe un objeto pero no sabe para que lo va a usar, es una funcion que es invocable
 
 # Paso 5) Preprocesar hello3.c, no compilar, y generar hello3.i. Buscar diferencias entre hello3.c y hello3.i.
 
