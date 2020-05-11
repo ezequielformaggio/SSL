@@ -38,25 +38,88 @@ La diferencia entre ambos codigos, es que en hello3.i, aparecen nuevas lineas de
 # 1 "hello3.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "hello3.c"
+# 1 "hello3.c"C:\Users\EzequielFormaggio\Desktop\03-FasesErrores\hello4.c
 
 Paso 6) Compilar el resultado y generar hello3.s, no ensamblar.
 
+No es posible generar el archivo hello3.s ya que la funcion pront no esta definida, algo que el preprocesador "dejo pasar".
+
 Paso 7) Corregir en el nuevo archivo hello4.c y empezar de nuevo, generar hello4.s, no ensamblar.
+
+hello4.c : 
+
+int printf(const char *s, ...);
+
+int main(void){
+int i=42;
+printf("La respuesta es %d\n");
+}
+
+En este paso si se pudo generar el hello4.s
 
 Paso 8) Investigar hello4.s.
 
+	.file	"hello4.c"
+	.text
+	.def	__main;	.scl	2;	.type	32;	.endef
+	.section .rdata,"dr"
+.LC0:
+	.ascii "La respuesta es %d\12\0"
+	.text
+	.globl	main
+	.def	main;	.scl	2;	.type	32;	.endef
+	.seh_proc	main
+main:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$48, %rsp
+	.seh_stackalloc	48
+	.seh_endprologue
+	call	__main
+	movl	$42, -4(%rbp)
+	leaq	.LC0(%rip), %rcx
+	call	printf
+	movl	$0, %eax
+	addq	$48, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
+	.ident	"GCC: (Rev2, Built by MSYS2 project) 9.3.0"
+	.def	printf;	.scl	2;	.type	32;	.endef
+
 Paso 9) Ensamblar hello4.s en hello4.o, no vincular
 
+Viualmente no se generron cambios
+
 Paso 10) Vincular hello4.o con la biblioteca estandar y generar el ejecutable
+
+Se genero el ejecutbale, el cual no permanece abierto en consola, se ejecuta y se cierra al instante
 
 Paso 11) Corregir en hello5.c y generar el ejecutable.
 
 Paso 12) Ejecutar y analizar el resultado.
 
+Se ejecuta hello.5 y nos aparece el siguiente mensaje:
+La respuesta es 10425264, el numero aparece por consecuencia de incluir el %d, que le indica al compilador que luego de esa cadena
+se debera mostrar un entero de forma decimal, al no haber una variable, supongo que el compilador utiliza una variable que tiene 
+seleccionada por defecto y muestra su contenido "basura"
+
 Paso 13) Corregir en hello6.c y empezar de nuevo.
  
+Una vez que ya no tenemos el %d, el programa muestra solamente el string que le escribimos, en este caso:
+La respuesta es 
+
+Otra variante seria poner: printf("La respuesta es %d\n", i);
+de esta forma el compilador daria el mensaje correcto, y podriamos ver el valor de i.
+
 Paso 14) hello7.c
+
+int main(void){
+  int i=42;
+    printf("La respuesta es %d\n", i);
+}
 
 Paso 15) Exlpicar porque funciona.
 
