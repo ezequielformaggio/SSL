@@ -12,7 +12,7 @@ una señal de advertencia, ya que no esta declarada la funcion prontf, en su lug
 
     warning: implicit declaration of function 'prontf'; did you mean 'printf'?
 
- 
+ comando ejecutado: gcc -o hello2.c
 
 # Paso 2) Preprocesar hello2.c, no compilar, y generar hello2.i. Analizar su contenido.
 
@@ -43,10 +43,15 @@ La diferencia entre ambos códigos, es que en hello3.i, aparecen nuevas lineas d
      #1 "<built-in>"
      #1 "<command-line>"
      #1 "hello3.c"C:\Users\EzequielFormaggio\Desktop\03-FasesErrores\hello4.c
+     
+
+comando utilizado: gcc -E hello3.c -o hello3.i
 
 # Paso 6) Compilar el resultado y generar hello3.s, no ensamblar.
 
 No es posible generar el archivo hello3.s ya que la función pront no esta definida, algo que el preprocesador "dejo pasar".
+
+comando utilizado: gcc -S hello3.c -o hello.s
 
 # Paso 7) Corregir en el nuevo archivo hello4.c y empezar de nuevo, generar hello4.s, no ensamblar.
 
@@ -60,6 +65,8 @@ hello4.c :
     }
 
 En este paso si se pudo generar el hello4.s
+
+comando utilizado: gcc -E hello4.c -o hello4.i
 
 # Paso 8) Investigar hello4.s.
 
@@ -99,7 +106,7 @@ Visualmente no se generaron cambios
 
 # Paso 10) Vincular hello4.o con la biblioteca estándar y generar el ejecutable
 
-# Se genero el ejecutable, el cual no permanece abierto en consola, se ejecuta y se cierra al instante
+Se genero el ejecutable, el cual no permanece abierto en consola, se ejecuta y se cierra al instante
 
 # Paso 11) Corregir en hello5.c y generar el ejecutable.
 
@@ -127,4 +134,5 @@ de esta forma el compilador daría el mensaje correcto, y podríamos ver el valo
 
 # Paso 15) Explicar porque funciona.
 
+En c no es necesario declarar una funcion para poder usarla, hay una declaracion implicita, pero el linker en este caso asume que printf es la misma funcion que se encuentra en la libreria estandar.
 
