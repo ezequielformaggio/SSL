@@ -44,3 +44,26 @@ Cual seria la mecanica?
 
 **h)¿Y cuando son retornados por una función?**
 
+mutabilidad, cambiar la cadena modificandola
+
+no mutable, pisar el valor de la cadena anterior
+
+ej "hola" cambiarla por "bola"
+cambio la h por la b
+
+
+mecanica de pasar un valor, por referencia o por valor
+
+ej
+
+s="hola"
+s="bola"
+se pisa
+
+char S[] = "hola",
+s[0]="b"
+
+modifica
+
+
+
