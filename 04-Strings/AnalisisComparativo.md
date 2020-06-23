@@ -1,15 +1,17 @@
 # Análisis Comparativo del tipo String:
 
-Para este análisis, los lenguajes que se van a comparar son C y C++.
+Para este análisis, los lenguajes que se van a comparar son C y Haskell (Prelude).
+
+Definicion de prelude:
+The Prelude: a standard module. The Prelude is imported by default into all Haskell modules unless either there is an explicit import statement for it, or the NoImplicitPrelude extension is enabled.
 
 **Items:**
 
 **a)¿El tipo es parte del lenguaje en algun nivel?**
 
-| C |C++|
+| C |Haskell|
 |--|--|
-| En C no existe el tipo de dato String | En c++ si |
-
+| En C no existe el tipo de dato String | En Haskell si (definido en el prelude como un tipo de dato [Char]|
 
 **b)¿El tipo es parte de la biblioteca?**
 
@@ -31,9 +33,9 @@ Mutabilidad de que?
 
 **f)¿El tipo es un First class citizen?**
 
-| C |C++|
+| C |Haskell|
 |--|--|
-| no | si |
+| No | Si |
 
 Definición:
 *First Class Citizen: (also **type**, **object**, **entity**, or **value**) in a given programming language is an entity which supports all the operations generally available to other entities. These operations typically include being passed as an argument, returned from a function, modified, and assigned to a variable.*
