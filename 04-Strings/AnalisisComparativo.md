@@ -3,7 +3,7 @@
 Para este análisis, los lenguajes que se van a comparar son C y Haskell (Prelude).
 
 Definicion de prelude:
-The Prelude: a standard module. The Prelude is imported by default into all Haskell modules unless either there is an explicit import statement for it, or the NoImplicitPrelude extension is enabled.
+El Prelude: un módulo estándar. El Prelude se importa de forma predeterminada en todos los módulos de Haskell, a menos que haya una declaración de importación explícita para él o que la extensión NoImplicitPrelude esté habilitada.
 
 **Items:**
 
@@ -15,7 +15,7 @@ The Prelude: a standard module. The Prelude is imported by default into all Hask
 
 **b)¿El tipo es parte de la biblioteca?**
 
-Este tipo de dato no es parte de la biblioteca Stdio.h
+Este tipo de dato no es parte de la biblioteca Stdio.h.
 
 **c)¿Que alfabeto usa?**
 
@@ -29,7 +29,14 @@ Se dispone de 2 tipos de alocacion en memoria, por un lado la **alocacion estát
 
 **e)¿El tipo tiene mutabilidad o es inmutable?**
 
-Mutabilidad de que?
+El tipo string es inmutable, una vez que se guarda una variable con un string en memoria, y esta se desea modificar, no se hacen cambios en la misma, sino que se copia el contenido y se lo guarda en otra direccion de memoria.
+
+Un ejemplo seria:
+
+var = "fender"
+var = var + "vg stratocaster"
+
+En un princpio, tendremos guardado en direccion de memoria la cadena "fender", luego, cuando modificamos la variable, lo que en realidad sucede es que se guarda en otra direccion de memoria una copia (a la cual se va a apuntar) que dice "fender vg stratocaster", luego el recolector de basura (si es que se cuenta con uno) borrara la direccion de memoria que se creo con la cadena "fender" si esta ya no es apuntada.
 
 **f)¿El tipo es un First class citizen?**
 
@@ -42,30 +49,10 @@ Definición:
 
 **g)¿Cual es la mecánica para este tipo cuando se los pasa como argumentos?**
 
-Cual seria la mecanica?
+Retomando el ejemplo del item e), podriamos pasar el valor "fender" como argumento, y hacer la modificacion dentro de la funcion. 
+Para ese entonces, tendriamos por un lado, la variable original var, por otro lado, la variable pasada como parametro, mas una copia modificada de la misma.
 
 **h)¿Y cuando son retornados por una función?**
 
-mutabilidad, cambiar la cadena modificandola
-
-no mutable, pisar el valor de la cadena anterior
-
-ej "hola" cambiarla por "bola"
-cambio la h por la b
-
-
-mecanica de pasar un valor, por referencia o por valor
-
-ej
-
-s="hola"
-s="bola"
-se pisa
-
-char S[] = "hola",
-s[0]="b"
-
-modifica
-
-
+Si se retorna la variable, el valor var (que esta fuera de la funcion) ahora apuntara a la variable retornada por la funcion.
 
