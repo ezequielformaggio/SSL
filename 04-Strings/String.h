@@ -1,16 +1,14 @@
-#include <stdio.h>
-
 /*
 Enunciado:
 Investigue y construya, en LENGUAJE C, la función que realiza cada operación solicitada:
-*/
 
-/*
 * Ejercicio 20 *
 (a) Calcula la longitud de una cadena;
 (b) Determina si una cadena dada es vacía.
 (c) Concatena dos cadenas.
 */
+
+#include <stdio.h>
 
 long calcularLongitudCadena(char cadena[]){
 
@@ -22,21 +20,8 @@ long calcularLongitudCadena(char cadena[]){
 
     return contador;
 
-    /*printf("A continuacion escriba una cadena de caracteres \n");
-    cadena = getchar();
-
-    while((cadena = getchar()) != EOF){
-        putchar(cadena);
-        contador++;
-    }
     
-    printf("El numero total de caracteres es: %d \n", contador);
-
-    // si la cadena fuera "computadora"
-    // assert(contador==12);
-
-    */
-} // cuenta los caracteres a medida que los voy poniendo
+} 
 
 int determinarCadenaVacia(char cadena[]){
 
@@ -48,14 +33,6 @@ int determinarCadenaVacia(char cadena[]){
 
     return cadenaVacia;
 
-    /*printf("A continuacion escriba una cadena de caracteres \n");
-    cadena = getchar();
-
-    while((cadena = getchar()) != EOF){
-        putchar(cadena);
-        contador++;
-    }
-*/
 } // determina si una cadena dada es vacia
 
 long potenciar(char cadena[], int potencia){
@@ -68,20 +45,8 @@ long potenciar(char cadena[], int potencia){
     for(i=0;i<potencia-1;i++){
         cadenaConcatenada = concatenarCadenas(cadenaConcatenada,cadena);
     }
-    /*printf("A continuacion escriba una cadena de caracteres: \n");
-    cadena = getchar();
 
-    while((cadena = getchar()) != EOF){
-        putchar(cadena);
-    }
-
-    printf("\n A continuacion escriba el exponente: \n");
-    potencia = getchar();
-
-    for(i=0;i<potencia;i++){
-        concatenarCadenas(cadena,cadena);
-    }
-*/
+    return cadenaConcatenada;
 }
 
 long concatenarCadenas(char cadena1[],char cadena2[]){
@@ -101,25 +66,8 @@ long concatenarCadenas(char cadena1[],char cadena2[]){
 
     return cadenaConcatenada;
 
-/*
-    printf("A continuacion escriba la primer cadena de caracteres \n");
-    cadena1 = getchar();
 
-    while((cadena1 = getchar()) != EOF){
-        putchar(cadena1);
-    }
-
-    printf("A continuacion escriba la segunda cadena de caracteres \n");
-    cadena2 = getchar();
-
-    while((cadena2 = getchar()) != EOF){
-        putchar(cadena2);
-    }
-
-    printf("%d %d", cadena1 , cadena2);
-*/
 } // concatena dos cadenas
-
 
 int compararCadenas (char cadena1[],char cadena2[]){
 
