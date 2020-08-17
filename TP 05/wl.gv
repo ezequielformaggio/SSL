@@ -1,0 +1,9 @@
+digraph G {
+
+IN -> OUT [label= "'' ''  '/t' ++NW"]
+IN -> OUT [label="'/n' ++NL"]
+OUT -> IN [label="Caracter (inicializar contador de caracteres)"]
+IN -> IN [label="Caracter (iterar contador) almacenar en arreglo"]
+OUT -> OUT [label="'' ''  '/n'  '/t'"]
+
+}
