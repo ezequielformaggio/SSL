@@ -13,3 +13,26 @@ c)
 b)
 
 ![Máquina de estado](https://lh3.googleusercontent.com/64iCxdcGnrBwV85aMCCzTbHrdVuztmwoAtu5dxvj2KeqaNjXQR6GejqdCwzHarFHHnRVP-YmLhSVIvlFThAPXZvcJrxlKmdBAn9naAOOjgMk9Diha4dF0zCITJ7A5M8QP0ZzKX7D4yoVNhLUcnUqp3KnoS6MfEgdOoOxqBs2jQhcL0c27voo719NrORCyMUOgzwla7VIFg59qt4bjNt0MJbOPIygu5qDuieI4Vrw_AatKoOpWDbb6UnbmKtKQVu_oD4Hi1s0maSJvI5jI8FT67kgLAb8uwBteFsLPAiwmUq6Aa-1V-v03MDavqzY1Ayf19SRJ-u_za1AKoNdRhyFEY5nhE9v-aMH_f4Tzf6bZfTO7MKv-n_SXbzWkIFadbQo7zxC-CcD63huGsBZCoJGxz4ZeM1a6FpMPmZZnmyPjq2a1SC4-wzKizsmjTvNKAIfV4PXLpZaHBFiNjPHOTmzYTMKtJqN3OChkx23ElE5Fpr-I-L2hwAIVxEkVEFNutF5dyl8h9MJdgKD8DNz49oNGT827WIx6f-sx8c5vYlh0P-mAhcKxQU8A-xlUFPg3K7Nb2q9sJedy2S2mwANBrGyLICMlf8RvaTYaW3nBN7O7f8xREwpWTVDgwNSgjc_h_O-fMOyXjPoyN5ZtiWzoJjBLtBj_HKOo6IvfOROBXFKg2nXQ6bkfnYnqg=w716-h271-no?authuser=0)
+
+# 3) Implementaciones de maquina de estados:
+
+a) Implementacion #1:
+
+Ventajas y desventajas con respecto a la version de KYR:
+
+Ventajas:
+- Su regularidad permite la automatizacion de la construccion del programa que implementa la maquina de estados
+
+Desventajas:
+- Esta version es menos eficiente
+
+Implementacion #2:
+
+
+
+
+
+
+
+
+
