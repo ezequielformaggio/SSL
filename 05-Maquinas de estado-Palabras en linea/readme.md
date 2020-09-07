@@ -33,6 +33,11 @@ Implementacion #2:
 En la actualidad, la funcionalidad del GOTO sigue existiendo en todos los lenguajes de programacion, aunque puede que aparezca bajo otros nombres y que su uso este delimitado para ciertos campos, lo mas habitual es encontrarla como una instruccion de salida de una estructura de control, como pueden ser bucles FOR..NEXT, DO..LOOP, etc.
 Algunos lenguajes que lo utilizan son, por ejemplo, Pascal, C#, Basic, Ensamblador, etc.
 
+Implementacion #3:
+
+No es necesario que las funciones recursivas accedan a contadores.
+
+Implementacion #X:
 
 
 
